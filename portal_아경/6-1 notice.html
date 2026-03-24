@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>파머스영어 회원포털 : 회원 공지사항</title>
+    <link rel="stylesheet" href="resource/css/reset.css" />
+    <link rel="stylesheet" href="resource/css/style.css" />
+    <link rel="stylesheet" href="resource/css/board.css" />
+    <link rel="stylesheet" href="resource/css/notice.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- Top Header -->
+    <header class="topbar">
+      <div class="topbar__inner">
+        <a class="brand" href="#">
+          <span class="brand__logo">
+            <img src="resource/images/logo.png" alt="PAMUS 로고" />
+          </span>
+        </a>
+        <div class="topbar__right">
+          <span class="chip chip--danger">
+            <img src="./resource/images/man.png" alt="" />본부장 admin
+          </span>
+          <div class="dropdown">
+            <button
+              class="icon-btn"
+              type="button"
+              aria-label="SNS"
+              id="snsDropdownBtn"
+            >
+              <img
+                class="icon"
+                src="./resource/images/Share.png"
+                alt=""
+                aria-hidden="true"
+              />
+              <span class="icon-btn__text">SNS</span>
+              <img
+                class="icon"
+                src="./resource/images/arrow_down.png"
+                alt=""
+                aria-hidden="true"
+              />
+            </button>
+            <ul class="dropdown__menu" id="snsDropdownMenu">
+              <li>
+                <a class="dropdown__item" href="#">공식블로그 바로가기</a>
+              </li>
+              <li><a class="dropdown__item" href="#">공구밴드 바로가기</a></li>
+              <li>
+                <a class="dropdown__item" href="#">인스타그램 바로가기</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- GNB Bar -->
+    <div class="gnb-bar">
+      <div class="gnb-bar__inner">
+        <nav class="gnb" aria-label="주요 메뉴">
+          <div class="gnb-item-wrap">
+            <a class="gnb__item has-sub" href="#"
+              >파머스 소식
+              <i class="ri-arrow-down-s-line" aria-hidden="true"></i
+            ></a>
+            <div class="sub-menu">
+              <a href="#">공지사항</a>
+              <a href="#">주요 일정</a>
+            </div>
+          </div>
+          <div class="gnb-item-wrap">
+            <a class="gnb__item has-sub" href="#"
+              >회원 채널 <i class="ri-arrow-down-s-line" aria-hidden="true"></i
+            ></a>
+            <div class="sub-menu">
+              <a href="#">교재자료실</a>
+              <a href="#">파머스디자인</a>
+            </div>
+          </div>
+          <div class="gnb-item-wrap">
+            <a class="gnb__item has-sub" href="#"
+              >강의 시스템<i class="ri-arrow-down-s-line" aria-hidden="true"></i
+            ></a>
+            <div class="sub-menu">
+              <a href="#">더 뉴 새김티처</a>
+              <a href="#">영어독서논술클럽</a>
+            </div>
+          </div>
+          <div class="gnb-item-wrap">
+            <a class="gnb__item has-sub" href="#"
+              >학습 지원<i class="ri-arrow-down-s-line" aria-hidden="true"></i
+            ></a>
+            <div class="sub-menu">
+              <a href="#">레벨테스트</a>
+              <a href="#">단어박사</a>
+              <a href="#">성적박사</a>
+              <a href="#" class="coming-soon">자료박사</a>
+              <a href="#" class="coming-soon">진로박사</a>
+            </div>
+          </div>
+          <a class="gnb__item has-sub" href="#">강사 교육</a>
+          <a class="gnb__item" href="#">회원게시판</a>
+          <a class="gnb__item" href="#">p.star</a>
+        </nav>
+        <button
+          class="hamburger"
+          id="mobileMenuToggle"
+          aria-label="메뉴 열기"
+          aria-controls="mobileDrawer"
+          aria-expanded="false"
+        >
+          <i class="ri-menu-line" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="drawer-overlay" id="drawerOverlay" hidden></div>
+    <aside
+      class="drawer"
+      id="mobileDrawer"
+      aria-label="모바일 메뉴"
+      aria-hidden="true"
+    >
+      <div class="drawer__head">
+        <div class="drawer__title">파머스영어</div>
+        <button class="drawer__close" id="drawerClose" aria-label="메뉴 닫기">
+          ×
+        </button>
+      </div>
+      <div class="drawer__user">
+        <span class="drawer__badge">본부장 admin</span>
+        <div class="drawer__sns">
+          <a
+            href="https://blog.naver.com/segimedu"
+            target="_blank"
+            aria-label="네이버 블로그"
+          >
+            <img src="./resource/images/naver_blog.png" alt="네이버 블로그" />
+          </a>
+          <a
+            href="https://band.us/66028914"
+            target="_blank"
+            aria-label="공구 밴드"
+          >
+            <img src="./resource/images/naver_band.png" alt="네이버 밴드" />
+          </a>
+          <a
+            href="https://www.instagram.com/pamus_english_official"
+            target="_blank"
+            aria-label="인스타그램"
+          >
+            <img src="./resource/images/insta.png" alt="인스타그램" />
+          </a>
+        </div>
+      </div>
+      <nav class="drawer__nav">
+        <button class="drawer__item drawer__item--toggle" type="button">
+          파머스소식 <i class="ri-arrow-down-s-line" aria-hidden="true"></i>
+        </button>
+        <div class="drawer__sub">
+          <a href="#">공지사항</a>
+          <a href="#">주요 일정</a>
+        </div>
+        <button class="drawer__item drawer__item--toggle" type="button">
+          회원채널 <i class="ri-arrow-down-s-line" aria-hidden="true"></i>
+        </button>
+        <div class="drawer__sub">
+          <a href="#">교재자료실</a>
+          <a href="#">파머스디자인</a>
+        </div>
+        <button class="drawer__item drawer__item--toggle" type="button">
+          학습지원 <i class="ri-arrow-down-s-line" aria-hidden="true"></i>
+        </button>
+        <div class="drawer__sub">
+          <a href="#">레벨테스트</a>
+          <a href="#">단어박사</a>
+          <a href="#">성적박사</a>
+          <a href="#" class="coming-soon">자료박사</a>
+          <a href="#" class="coming-soon">진로박사</a>
+        </div>
+        <button class="drawer__item drawer__item--toggle" type="button">
+          강의시스템<i class="ri-arrow-down-s-line" aria-hidden="true"></i>
+        </button>
+        <div class="drawer__sub">
+          <a href="#">영어독서논술클럽</a>
+        </div>
+        <a class="drawer__item" href="#">강사교육</a>
+        <a class="drawer__item" href="#">회원게시판</a>
+        <a class="drawer__item" href="#">P.star</a>
+        <div class="drawer__divider"></div>
+      </nav>
+    </aside>
+
+    <!-- 메인 컨텐츠 -->
+    <main class="page-wrap">
+      <div class="page-inner">
+        <!-- 브레드크럼 -->
+        <nav class="breadcrumb" aria-label="현재 위치">
+          <a href="#">파머스소식</a>
+          <span class="breadcrumb__sep">›</span>
+          <a href="6-1 notice.html">공지사항</a>
+        </nav>
+
+        <!-- 페이지 타이틀 -->
+        <h1 class="page-title">공지사항</h1>
+
+        <!-- 검색 -->
+        <div class="search-row">
+          <div class="search-box">
+            <input type="text" placeholder="검색어를 입력해주세요." />
+            <button class="search-btn" aria-label="검색">
+              <img src="resource/images_board/feature_search.png" alt="검색" />
+            </button>
+          </div>
+        </div>
+
+        <!-- 총 건수 -->
+        <p class="notice-count">총 <strong>54</strong>건</p>
+
+        <!-- 게시판 테이블 -->
+        <div class="notice-table">
+          <div class="notice-table__head">
+            <span class="col-num">번호</span>
+            <span class="col-cat">분류</span>
+            <span class="col-title">제목</span>
+            <span class="col-author">작성자</span>
+            <span class="col-date">등록일</span>
+          </div>
+          <div class="notice-row notice-row--fixed">
+            <span class="col-num"><span class="notice-badge">공지</span></span>
+            <span class="col-cat"><span class="notice-cat">안내 사항</span></span>
+            <span class="col-title">파머스영어 리브랜딩 안내 <span class="notice-new">N</span></span>
+            <span class="col-author">관리자</span>
+            <span class="col-date">2026.01.30</span>
+          </div>
+          <div class="notice-row notice-row--fixed">
+            <span class="col-num"><span class="notice-badge">공지</span></span>
+            <span class="col-cat"><span class="notice-cat">공동 구매</span></span>
+            <span class="col-title">파머스영어 신학기 공구 진행</span>
+            <span class="col-author">관리자</span>
+            <span class="col-date">2025.12.23</span>
+          </div>
+          <div class="notice-row">
+            <span class="col-num">54</span>
+            <span class="col-cat"><span class="notice-cat">교육 안내</span></span>
+            <span class="col-title">파머스영어 12월 온라인 zoom 교육 안내 <span class="notice-new">N</span></span>
+            <span class="col-author">관리자</span>
+            <span class="col-date">2026.01.23</span>
+          </div>
+          <div class="notice-row">
+            <span class="col-num">53</span>
+            <span class="col-cat"></span>
+            <span class="col-title">파머스영어 블랙프라이데이 코니 3공 바인더 BIG SALE</span>
+            <span class="col-author">관리자</span>
+            <span class="col-date">2025.11.27</span>
+          </div>
+          <div class="notice-row">
+            <span class="col-num">52</span>
+            <span class="col-cat"></span>
+            <span class="col-title">파머스영어 로고송 공개</span>
+            <span class="col-author">관리자</span>
+            <span class="col-date">2025.11.11</span>
+          </div>
+          <div class="notice-row">
+            <span class="col-num">51</span>
+            <span class="col-cat"></span>
+            <span class="col-title">파머스영어 원장 밴드 변경 안내</span>
+            <span class="col-author">관리자</span>
+            <span class="col-date">2025.11.06</span>
+          </div>
+          <div class="notice-row">
+            <span class="col-num">49</span>
+            <span class="col-cat"></span>
+            <span class="col-title">파머스타임즈 겨울호 발간</span>
+            <span class="col-author">관리자</span>
+            <span class="col-date">2025.11.05</span>
+          </div>
+          <div class="notice-row">
+            <span class="col-num">48</span>
+            <span class="col-cat"></span>
+            <span class="col-title">[제5회 PMT] 흔들리지 않는 학원 운영의 비밀</span>
+            <span class="col-author">관리자</span>
+            <span class="col-date">2026.10.17</span>
+          </div>
+          <div class="notice-row">
+            <span class="col-num">47</span>
+            <span class="col-cat"></span>
+            <span class="col-title">2025 ATA 영어캠프 안내</span>
+            <span class="col-author">관리자</span>
+            <span class="col-date">2025.09.25</span>
+          </div>
+          <div class="notice-row">
+            <span class="col-num">46</span>
+            <span class="col-cat"></span>
+            <span class="col-title">제5회 파머스영어 경영진 워크샵 PMT 개최 안내</span>
+            <span class="col-author">관리자</span>
+            <span class="col-date">2025.09.22</span>
+          </div>
+        </div>
+
+        <!-- 페이지네이션 -->
+        <div class="pagination">
+          <button class="page-btn page-btn--active">1</button>
+          <button class="page-btn">2</button>
+          <button class="page-btn">3</button>
+          <button class="page-btn">4</button>
+          <button class="page-btn">5</button>
+          <button class="page-btn">›</button>
+          <button class="page-btn">»</button>
+        </div>
+      </div>
+    </main>
+
+   
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer__links">
+        <a href="#">이용약관</a>
+        <a href="#">개인정보처리방침</a>
+      </div>
+      <div class="footer__copy">
+        <div>
+          회사명 : 새김교육(주) | 대표 : 한선덕 | 사업자등록번호 : 809-81-00876
+        </div>
+        <div>경기 화성시 동탄산단대로 823 에이팩시티 1105호</div>
+        <div>
+          통신판매업신고 : 2024-화성동탄-4842호 | E-mail : segimedu@naver.com ㅣ
+          개인정보관리책임자 : 차아경
+        </div>
+      </div>
+    </footer>
+
+    <!-- Floating quick buttons -->
+    <aside class="float" aria-label="퀵 메뉴">
+      <a class="float__btn float__btn--home" href="#" title="홈"
+        ><img src="./resource/images/home.png" alt="홈"
+      /></a>
+      <a class="float__btn float__btn--remote" href="#" title="원격"
+        ><img src="./resource/images/computer.png" alt="원격"
+      /></a>
+      <a class="float__btn float__btn--kakao" href="#" title="카카오"
+        ><img src="./resource/images/kakaotalk.png" alt="카카오"
+      /></a>
+    </aside>
+
+   <script src="resource/js/common.js"></script>
+  <script src="resource/js/notice.js"></script>
+
+  </body>
+</html>
