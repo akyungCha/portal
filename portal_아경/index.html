@@ -1,0 +1,841 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>파머스영어 회원포털 - 홈 대시보드</title>
+    <link rel="stylesheet" href="resource/css/reset.css" />
+    <link rel="stylesheet" href="resource/css/style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <!-- Top Header -->
+    <header class="topbar">
+      <div class="topbar__inner">
+        <a class="brand" href="#">
+          <span class="brand__logo">
+            <img src="resource/images/logo.png" alt="PAMUS 로고" />
+          </span>
+        </a>
+
+        <div class="topbar__right">
+          <span class="chip chip--danger"
+            ><img src="./resource/images/man.png" alt="" />본부장 admin</span
+          >
+          <div class="dropdown">
+            <button
+              class="icon-btn"
+              type="button"
+              aria-label="SNS"
+              id="snsDropdownBtn"
+            >
+              <img
+                class="icon"
+                src="./resource/images/Share.png"
+                alt=""
+                aria-hidden="true"
+              />
+              <span class="icon-btn__text">SNS</span>
+              <img
+                class="icon"
+                src="./resource/images/arrow_down.png"
+                alt=""
+                aria-hidden="true"
+              />
+            </button>
+            <ul class="dropdown__menu" id="snsDropdownMenu">
+              <li>
+                <a class="dropdown__item" href="#">공식블로그 바로가기</a>
+              </li>
+              <li><a class="dropdown__item" href="#">공구밴드 바로가기</a></li>
+              <li>
+                <a class="dropdown__item" href="#">인스타그램 바로가기</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- GNB Bar  -->
+    <div class="gnb-bar">
+      <div class="gnb-bar__inner">
+        <nav class="gnb" aria-label="주요 메뉴">
+          <div class="gnb-item-wrap">
+            <a class="gnb__item has-sub" href="#">
+              파머스 소식
+              <i class="ri-arrow-down-s-line" aria-hidden="true"></i
+            ></a>
+            <div class="sub-menu">
+              <a href="#">공지사항</a>
+              <a href="#">주요 일정</a>
+            </div>
+          </div>
+          <div class="gnb-item-wrap">
+            <a class="gnb__item has-sub" href="#">
+              회원 채널
+              <i class="ri-arrow-down-s-line" aria-hidden="true"></i
+            ></a>
+            <div class="sub-menu">
+              <a href="#">교재자료실</a>
+              <a href="#">파머스디자인</a>
+            </div>
+          </div>
+          <div class="gnb-item-wrap">
+            <a class="gnb__item has-sub" href="#">
+              강의 시스템<i class="ri-arrow-down-s-line" aria-hidden="true"></i
+            ></a>
+            <div class="sub-menu">
+              <a href="#">더 뉴 새김티처</a>
+              <a href="#">영어독서논술클럽</a>
+            </div>
+          </div>
+          <div class="gnb-item-wrap">
+            <a class="gnb__item has-sub" href="#">
+              학습 지원<i class="ri-arrow-down-s-line" aria-hidden="true"></i
+            ></a>
+            <div class="sub-menu">
+              <a href="#">레벨테스트</a>
+              <a href="#">단어박사</a>
+              <a href="#">성적박사</a>
+              <a href="#" class="coming-soon">자료박사</a>
+              <a href="#" class="coming-soon">진로박사</a>
+            </div>
+          </div>
+          <a class="gnb__item has-sub" href="#">강사 교육</a>
+          <a class="gnb__item" href="#">회원게시판</a>
+          <a class="gnb__item" href="#">p.star</a>
+        </nav>
+
+        <!-- 모바일 햄버거 -->
+        <button
+          class="hamburger"
+          id="mobileMenuToggle"
+          aria-label="메뉴 열기"
+          aria-controls="mobileDrawer"
+          aria-expanded="false"
+        >
+          <i class="ri-menu-line" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="drawer-overlay" id="drawerOverlay" hidden></div>
+
+    <aside
+      class="drawer"
+      id="mobileDrawer"
+      aria-label="모바일 메뉴"
+      aria-hidden="true"
+    >
+      <div class="drawer__head">
+        <div class="drawer__title">파머스영어</div>
+        <button class="drawer__close" id="drawerClose" aria-label="메뉴 닫기">
+          ×
+        </button>
+      </div>
+
+      <div class="drawer__user">
+        <span class="drawer__badge">본부장 admin</span>
+        <div class="drawer__sns">
+          <a
+            href="https://blog.naver.com/segimedu"
+            target="_blank"
+            aria-label="네이버 블로그"
+          >
+            <img src="./resource/images/naver_blog.png" alt="네이버 블로그" />
+          </a>
+          <a
+            href="https://band.us/66028914"
+            target="_blank"
+            aria-label="공구 밴드"
+          >
+            <img src="./resource/images/naver_band.png" alt="네이버 밴드" />
+          </a>
+          <a
+            href="https://www.instagram.com/pamus_english_official"
+            target="_blank"
+            aria-label="인스타그램"
+          >
+            <img src="./resource/images/insta.png" alt="인스타그램" />
+          </a>
+        </div>
+      </div>
+
+      <nav class="drawer__nav">
+        <button class="drawer__item drawer__item--toggle" type="button">
+          파머스소식 <i class="ri-arrow-down-s-line" aria-hidden="true"></i>
+        </button>
+        <div class="drawer__sub">
+          <a href="#">공지사항</a>
+          <a href="#">주요 일정</a>
+        </div>
+        <button class="drawer__item drawer__item--toggle" type="button">
+          회원채널 <i class="ri-arrow-down-s-line" aria-hidden="true"></i>
+        </button>
+        <div class="drawer__sub">
+          <a href="#">교재자료실</a>
+          <a href="#">파머스디자인</a>
+        </div>
+        <!-- 모바일에서 새김티처 안보이게 -->
+        <button class="drawer__item drawer__item--toggle" type="button">
+          학습지원 <i class="ri-arrow-down-s-line" aria-hidden="true"></i>
+        </button>
+        <div class="drawer__sub">
+          <a href="#">레벨테스트</a>
+          <a href="#">단어박사</a>
+          <a href="#">성적박사</a>
+          <a href="#" class="coming-soon">자료박사</a>
+          <a href="#" class="coming-soon">진로박사</a>
+        </div>
+        <button class="drawer__item drawer__item--toggle" type="button">
+          강의시스템<i class="ri-arrow-down-s-line" aria-hidden="true"></i>
+        </button>
+        <div class="drawer__sub">
+          <a href="#">영어독서논술클럽</a>
+        </div>
+        <a class="drawer__item" href="#">강사교육</a>
+        <a class="drawer__item" href="#">회원게시판</a>
+        <a class="drawer__item" href="#">P.star</a>
+
+        <div class="drawer__divider"></div>
+      </nav>
+    </aside>
+
+    <!-- Main -->
+    <main class="page">
+      <section class="dashboard" aria-label="대시보드">
+        <div class="dashboard-grid">
+          <!-- My service 카드 -->
+          <article class="card">
+            <header class="card__head" style="display:flex; align-items:center; justify-content:space-between;">
+              <h2 class="card__title">
+                <span class="service" aria-hidden="true">
+                  <img src="resource/images/service.png" alt="" />
+                </span>
+                My Service
+              </h2>
+              <h3 class="campus-name"><i class="ri-user-line"></i> 파머스영어 강남캠퍼스</h3>
+            </header>
+
+            <div class="member-box">
+              <div class="member-banner">
+                <div class="member-banner__icon">
+                  <img src="./resource/images/mall.png" alt="PAMUS 몰" />
+                </div>
+
+                <div class="member-banner__text">
+                  <div class="member-banner__brand">PAMUS 몰</div>
+                  <div class="member-banner__desc">교재 및 마케팅몰 주문</div>
+                </div>
+                <a
+                  class="member-banner__cta"
+                  href="https://epamus.com/shop/premium_list.php"
+                  aria-label="PAMUS 몰 바로가기"
+                >
+                  <span class="member-banner__cta-icon">
+                    <img src="./resource/images/go.png" alt="" />
+                  </span>
+                </a>
+              </div>
+
+              <div class="member-stats">
+                <div class="member-stats__item member-stats__item--left">
+                  <a class="stat" href="#">
+                    <span class="stat__label">배송 진행중</span>
+                  </a>
+                </div>
+
+                <div class="member-stats__item member-stats__item--right">
+                  <a class="stat" href="#">
+                    <span class="stat__label">장바구니</span>
+                    <span class="stat__num stat__num--effect">4</span>
+                  </a>
+                </div>
+              </div>
+
+              <div class="member-credit">
+                <div class="member-credit__icon">
+                  <img src="./resource/images/creadit.png" alt="P-크레딧" />
+                </div>
+
+                <div class="member-credit__text">
+                  <div class="member-credit__title">P-크레딧 관리</div>
+                  <div class="member-credit__desc">
+                    크레딧 충전 및 사용 내역
+                  </div>
+                  <div class="member-credit__desc2">
+                    정기,구독 상품 결제 관리
+                  </div>
+                </div>
+                <a
+                  class="member-banner__cta"
+                  href="#"
+                  aria-label="e-cash바로가기"
+                >
+                  <span class="member-banner__cta-icon">
+                    <img src="./resource/images/go.png" alt="" />
+                  </span>
+                </a>
+              </div>
+
+              <div class="member-actions">
+                <a class="action action--gray" href="#">
+                  <span class="action__icon">
+                    <img src="./resource/images/computer.png" alt="원격지원" />
+                  </span>
+                  <span class="action__text">
+                    원격 지원
+                    <small class="action__sub">PC연결 및 지원</small>
+                  </span>
+                </a>
+                <a class="action action--yellow" href="#">
+                  <span class="action__icon">
+                    <img src="./resource/images/kakaotalk.png" alt="카톡채널" />
+                  </span>
+                  <span class="action__text">
+                    카톡 상담
+                    <small class="action__sub">카카오 채널연걸</small>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 공지사항 카드 래퍼 -->
+          <div class="notice-wrap">
+            <!-- 공지사항 미리보기 모달 -->
+            <div class="notice-modal" id="noticeModal" hidden>
+              <div class="notice-modal__head">
+                <div class="notice-modal__meta" id="noticeModalDate"></div>
+                <button
+                  class="notice-modal__close"
+                  id="noticeModalClose"
+                  aria-label="닫기"
+                >
+                  ✕
+                </button>
+              </div>
+              <h3 class="notice-modal__title" id="noticeModalTitle"></h3>
+              <div class="notice-modal__body" id="noticeModalBody"></div>
+              <button class="notice-modal__btn" id="noticeModalConfirm">
+                상세보기
+              </button>
+            </div>
+
+            <!-- 공지사항 카드 -->
+
+            <article class="card">
+              <header class="card__head">
+                <h2 class="card__title">
+                  <span class="action__icon">
+                    <img src="./resource/images/notice.png" alt="공지사항" />
+                  </span>
+                  공지 사항
+                </h2>
+                <button class="card__add" type="button" aria-label="추가">
+                  <img src="./resource/images/plus.png" alt="추가" />
+                </button>
+              </header>
+
+              <ul class="list" id="noticeList">
+                <li class="list__item">
+                  <span class="dot dot--danger" aria-hidden="true"></span>
+                  <a
+                    class="list__link notice-link"
+                    href="#"
+                    data-title="2026년 새학기 이벤트 안내"
+                    data-date="2026.02.20"
+                    data-content="2026년 새학기를 맞이하여 특별 이벤트를 진행합니다. 자세한 내용은 공식 홈페이지를 참고해 주시기 바랍니다."
+                    >2026년 새학기 이벤트 안내</a
+                  >
+                  <time class="list__date" datetime="2026-02-20"
+                    >2026.02.20</time
+                  >
+                </li>
+                <li class="list__item">
+                  <span class="dot dot--danger" aria-hidden="true"></span>
+                  <a
+                    class="list__link notice-link"
+                    href="#"
+                    data-title="겨울방학 필리핀 캠프 모집 중"
+                    data-date="2026.03.18"
+                    data-content="겨울방학 필리핀 영어 캠프 모집을 시작합니다. 참가 희망자는 기간 내 신청서를 제출해 주세요."
+                    >겨울방학 필리핀 캠프 모집 중</a
+                  >
+                  <time class="list__date" datetime="2026-03-18"
+                    >2026.03.18</time
+                  >
+                </li>
+                <li class="list__item">
+                  <span class="dot" aria-hidden="true"></span>
+                  <a
+                    class="list__link notice-link"
+                    href="#"
+                    data-title="시스템 정기 점검 안내 (03/25)"
+                    data-date="2026.03.25"
+                    data-content="03월 25일(수) 새벽 2시~6시 시스템 정기 점검이 진행됩니다. 해당 시간에는 서비스 이용이 불가합니다."
+                    >시스템 정기 점검 안내 (03/25)</a
+                  >
+                  <time class="list__date" datetime="2026-03-25"
+                    >2026.03.25</time
+                  >
+                </li>
+                <li class="list__item">
+                  <span class="dot" aria-hidden="true"></span>
+                  <a
+                    class="list__link notice-link"
+                    href="#"
+                    data-title="파머스영어 온라인 ZOOM 교육 안내 (04/20)"
+                    data-date="2026.04.20"
+                    data-content="04월 20일(월) 오후 2시 파머스영어 온라인 ZOOM 교육이 진행됩니다. 사전 신청 후 참여해 주세요."
+                    >파머스영어 온라인 ZOOM 교육 안내 (04/20)</a
+                  >
+                  <time class="list__date" datetime="2026-04-20"
+                    >2026.04.20</time
+                  >
+                </li>
+                <li class="list__item">
+                  <span class="dot" aria-hidden="true"></span>
+                  <a
+                    class="list__link notice-link"
+                    href="#"
+                    data-title="아리스토스 교사용 자료 공개"
+                    data-date="2026.02.11"
+                    data-content="아리스토스 교사용 자료가 자료실에 공개되었습니다. 로그인 후 자료실에서 확인하실 수 있습니다."
+                    >아리스토스 교사용 자료 공개</a
+                  >
+                  <time class="list__date" datetime="2026-02-11"
+                    >2026.02.11</time
+                  >
+                </li>
+                <li class="list__item">
+                  <span class="dot" aria-hidden="true"></span>
+                  <a
+                    class="list__link notice-link"
+                    href="#"
+                    data-title="2026년 1학기 교재 배송 일정 안내"
+                    data-date="2026.02.05"
+                    data-content="2026년 1학기 교재 배송 일정을 안내드립니다. 배송 일정은 지역별로 상이하오니 확인 후 이용해 주세요."
+                    >2026년 1학기 교재 배송 일정 안내</a
+                  >
+                  <time class="list__date" datetime="2026-02-05"
+                    >2026.02.05</time
+                  >
+                </li>
+                <li class="list__item">
+                  <span class="dot" aria-hidden="true"></span>
+                  <a
+                    class="list__link notice-link"
+                    href="#"
+                    data-title="파머스영어 앱 업데이트 안내"
+                    data-date="2026.01.28"
+                    data-content="파머스영어 앱이 새롭게 업데이트되었습니다. 최신 버전으로 업데이트하여 개선된 기능을 이용해 주세요."
+                    >파머스영어 앱 업데이트 안내</a
+                  >
+                  <time class="list__date" datetime="2026-01-28"
+                    >2026.01.28</time
+                  >
+                </li>
+                <li class="list__item">
+                  <span class="dot" aria-hidden="true"></span>
+                  <a
+                    class="list__link notice-link"
+                    href="#"
+                    data-title="회원 등급 개편 안내"
+                    data-date="2026.01.15"
+                    data-content="회원 등급 체계가 개편됩니다. 변경된 등급 기준 및 혜택은 공지사항 전문을 참고해 주세요."
+                    >회원 등급 개편 안내</a
+                  >
+                  <time class="list__date" datetime="2026-01-15"
+                    >2026.01.15</time
+                  >
+                </li>
+              </ul>
+            </article>
+          </div>
+          <!-- /notice-wrap -->
+
+          <!-- 학습 지원 카드 -->
+
+          <article class="card">
+            <header class="card__head">
+              <h2 class="card__title">
+                <img
+                  class="emoji"
+                  src="./resource/images/study.png"
+                  alt="학습 지원"
+                />
+                학습 지원
+              </h2>
+              <button class="card__add" type="button" aria-label="추가">
+                <img src="./resource/images/plus.png" alt="추가" />
+              </button>
+            </header>
+
+            <div class="support">
+              <a class="support__banner support__banner--purple" href="#">
+                <img
+                  class="support__banner-bg"
+                  src="./resource/images/segim.png"
+                  alt=""
+                />
+                <div class="support__banner-title">더 뉴 새김티처3.0</div>
+                <div class="support__banner-desc">
+                  최강의 학생 참여형 언어학습 도구
+                </div>
+                <span class="support__arrow" aria-hidden="true"
+                  ><img src="./resource/images/go_white.png" alt=""
+                /></span>
+              </a>
+
+              <a class="support__banner support__banner--green" href="#">
+                <img
+                  class="support__banner-bg"
+                  src="./resource/images/book.png"
+                  alt=""
+                />
+                <div class="support__banner-title">영어독서논술클럽</div>
+                <div class="support__banner-desc">
+                  독서력/문해력/사고력으로 완성
+                </div>
+                <span class="support__arrow" aria-hidden="true"
+                  ><img src="./resource/images/go_white.png" alt=""
+                /></span>
+              </a>
+
+              <a class="support__banner support__banner--gray" href="#">
+                <img
+                  class="support__banner-bg2"
+                  src="./resource/images/level.png"
+                  alt=""
+                />
+                <div class="support__banner-title2">레벨테스트</div>
+                <div class="support__banner-desc2">
+                  실력에 딱 맞는 학습 레벨 진단
+                </div>
+                <span class="support__arrow2" aria-hidden="true"
+                  ><img src="./resource/images/go.png" alt=""
+                /></span>
+              </a>
+
+              <div class="support__icons" aria-label="바로가기">
+                <a class="mini" href="#">
+                  <img
+                    class="mini__icon"
+                    src="./resource/images/voca.png"
+                    alt="단어 박사"
+                  />
+                  단어 박사
+                </a>
+                <a class="mini" href="#">
+                  <img
+                    class="mini__icon"
+                    src="./resource/images/grade.png"
+                    alt="성적 박사"
+                  />
+                  성적 박사
+                </a>
+                <a class="mini" href="#">
+                  <img
+                    class="mini__icon"
+                    src="./resource/images/paper.png"
+                    alt="자료 박사"
+                  />
+                  자료 박사
+                </a>
+                <a class="mini" href="#">
+                  <img
+                    class="mini__icon"
+                    src="./resource/images/teacher.png"
+                    alt="진로 박사"
+                  />
+                  진로 박사
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 자료실 카드 -->
+          <article class="card">
+            <header class="card__head">
+              <h2 class="card__title">
+                <img
+                  class="emoji"
+                  src="./resource/images/folder.png"
+                  alt=""
+                  aria-hidden="true"
+                />
+                자료실
+              </h2>
+              <button class="card__add" type="button" aria-label="추가">
+                <img src="./resource/images/plus.png" alt="추가" />
+              </button>
+            </header>
+
+            <div class="tabs" role="tablist" aria-label="자료실 탭">
+              <button
+                class="tab is-active"
+                type="button"
+                role="tab"
+                aria-selected="true"
+              >
+                교재 자료실
+              </button>
+              <button
+                class="tab"
+                type="button"
+                role="tab"
+                aria-selected="false"
+              >
+                파머스 디자인
+              </button>
+
+              <!-- 국제어학원 회원에게만 활성화 
+               <button
+                class="tab"
+                type="button"
+                role="tab"
+                aria-selected="false"
+              >
+                파머스국제어학원
+              </button> -->
+            </div>
+
+            <ul class="list list--compact">
+              <li class="list__item">
+                <span class="dot dot--danger" aria-hidden="true"></span>
+                <a class="list__link" href="#"
+                  >[필독]2026년 신규 교재 개정판 안내</a
+                >
+                <time class="list__date" datetime="2025-12-22">2025.12.22</time>
+              </li>
+              <li class="list__item">
+                <span class="dot dot--danger" aria-hidden="true"></span>
+                <a class="list__link" href="#"
+                  >[필독]2026년 영단어 교재 자료실 탑재 안내</a
+                >
+                <time class="list__date" datetime="2025-12-22">2025.12.22</time>
+              </li>
+              <li class="list__item">
+                <span class="dot" aria-hidden="true"></span>
+                <a class="list__link" href="#">(NEW) Library 자료 </a>
+                <time class="list__date" datetime="2026-02-28">2026.02.28</time>
+              </li>
+              <li class="list__item">
+                <span class="dot" aria-hidden="true"></span>
+                <a class="list__link" href="#"
+                  >(NEW) Library 업데이트 내용 요약
+                </a>
+                <time class="list__date" datetime="2026-02-28">2026.02.26</time>
+              </li>
+              <li class="list__item">
+                <span class="dot" aria-hidden="true"></span>
+                <a class="list__link" href="#"> 아리스토스 해설집 vol.1</a>
+                <time class="list__date" datetime="2026-02-28">2026.02.25</time>
+              </li>
+              <li class="list__item">
+                <span class="dot" aria-hidden="true"></span>
+                <a class="list__link" href="#"> 아리스토스 해설집 vol.2</a>
+                <time class="list__date" datetime="2026-02-28">2026.02.25</time>
+              </li>
+              <li class="list__item">
+                <span class="dot" aria-hidden="true"></span>
+                <a class="list__link" href="#"> 아리스토스 해설집(공통)</a>
+                <time class="list__date" datetime="2026-02-28">2026.02.23</time>
+              </li>
+              <li class="list__item">
+                <span class="dot" aria-hidden="true"></span>
+                <a class="list__link" href="#"> 아리스토스 해설집(공통)</a>
+                <time class="list__date" datetime="2026-02-28">2026.02.23</time>
+              </li>
+            </ul>
+          </article>
+
+          <!-- 캘린더 카드 -->
+
+          <article class="card">
+            <header class="card__head">
+              <h2 class="card__title">
+                <img
+                  class="emoji"
+                  src="./resource/images/calender.png"
+                  alt=""
+                  aria-hidden="true"
+                />
+                주요 일정
+              </h2>
+              <button class="card__add" type="button" aria-label="추가">
+                <img src="./resource/images/plus.png" alt="추가" />
+              </button>
+            </header>
+
+            <div class="calendar">
+              <div class="calendar__top">
+                <button class="nav-btn" type="button" aria-label="이전">
+                  <img src="./resource/images/left_arrow.png" alt="" />
+                </button>
+                <div class="calendar__title">2026년 01월</div>
+                <button class="nav-btn" type="button" aria-label="다음">
+                  <img src="./resource/images/right_arrow.png" alt="" />
+                </button>
+              </div>
+
+              <div class="calendar__grid" aria-hidden="true">
+                <div class="dow dow-sun">일</div>
+                <div class="dow">월</div>
+                <div class="dow">화</div>
+                <div class="dow">수</div>
+                <div class="dow">목</div>
+                <div class="dow">금</div>
+                <div class="dow dow-sat">토</div>
+              </div>
+              <div class="calendar__days" aria-hidden="true">
+                <div class="day is-muted">28</div>
+                <div class="day is-muted">29</div>
+                <div class="day is-muted">30</div>
+                <div class="day is-muted">31</div>
+                <div class="day">1</div>
+                <div class="day">2</div>
+                <div class="day is-blue">3</div>
+                <div class="day is-hot">4</div>
+                <div class="day">5</div>
+                <div class="day is-today">6</div>
+                <div class="day is-selected">7</div>
+                <div class="day">8</div>
+                <div class="day is-event">9</div>
+                <div class="day is-hot is-event">10</div>
+                <div class="day">11</div>
+                <div class="day">12</div>
+                <div class="day">13</div>
+                <div class="day is-event">14</div>
+                <div class="day is-event">15</div>
+                <div class="day">16</div>
+                <div class="day is-hot">17</div>
+                <div class="day">18</div>
+                <div class="day">19</div>
+                <div class="day">20</div>
+                <div class="day">21</div>
+                <div class="day">22</div>
+                <div class="day">23</div>
+                <div class="day is-hot">24</div>
+                <div class="day">25</div>
+                <div class="day">26</div>
+                <div class="day">27</div>
+                <div class="day">28</div>
+                <div class="day">29</div>
+                <div class="day">30</div>
+              </div>
+
+              <ul class="list">
+                <li class="list__item">
+                  <span class="badge badge--danger" aria-hidden="true"></span>
+                  <div class="event__body">
+                    <div class="event__meta">1/09(금)</div>
+                    <div class="event__title">파머스영어 비전플러스 1차</div>
+                    <div class="event__place">본사</div>
+                  </div>
+                </li>
+                <li class="list__item">
+                  <span class="badge badge--danger" aria-hidden="true"></span>
+                  <div class="event__body">
+                    <div class="event__meta">1/10(토)</div>
+                    <div class="event__title">파머스영어 비전플러스 2차</div>
+                    <div class="event__place">본사</div>
+                  </div>
+                </li>
+                <li class="list__item">
+                  <span class="badge badge--primary" aria-hidden="true"></span>
+                  <div class="event__body">
+                    <div class="event__meta">1/14(수)</div>
+                    <div class="event__title">파머스영어 학부모 세미나</div>
+                    <div class="event__place">안양</div>
+                  </div>
+                </li>
+                <li class="list__item">
+                  <span class="badge badge--warn" aria-hidden="true"></span>
+                  <div class="event__body">
+                    <div class="event__meta">1/15(목)</div>
+                    <div class="event__title">파머스영어 경기사업설명회</div>
+                    <div class="event__place">남양주</div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- 강의박사 카드 -->
+
+          <article class="card">
+            <header class="card__head">
+              <h2 class="card__title">
+                <img
+                  class="emoji"
+                  src="./resource/images/monitor.png"
+                  alt=""
+                  aria-hidden="true"
+                />
+                강의 박사
+              </h2>
+              <button class="card__add" type="button" aria-label="추가">
+                <img src="./resource/images/plus.png" alt="추가" />
+              </button>
+            </header>
+
+            <ul class="list list--compact">
+              <li class="list__item">
+                <span class="dot" aria-hidden="true"></span>
+                <a class="list__link" href="#"
+                  >기초 강사 교육(시스템, LMS) 2026</a
+                >
+                <time class="list__date" datetime="2026-01-02">2026.01.02</time>
+              </li>
+              <li class="list__item">
+                <span class="dot" aria-hidden="true"></span>
+                <a class="list__link" href="#"
+                  >기초 강사 교육(시스템, LMS) 2026</a
+                >
+                <time class="list__date" datetime="2026-01-02">2026.01.02</time>
+              </li>
+            </ul>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer__links">
+        <a href="#">이용약관</a>
+        <a href="#">개인정보처리방침</a>
+      </div>
+      <div class="footer__copy">
+        <div>
+          회사명 : 새김교육(주) | 대표 : 한선덕 | 사업자등록번호 : 809-81-00876
+        </div>
+        <div>경기 화성시 동탄산단대로 823 에이팩시티 1105호</div>
+        <div>
+          통신판매업신고 : 2024-화성동탄-4842호 | E-mail : segimedu@naver.com ㅣ
+          개인정보관리책임자 : 차아경
+        </div>
+      </div>
+    </footer>
+
+    <!-- Floating quick buttons (right) -->
+    <aside class="float" aria-label="퀵 메뉴">
+      <a class="float__btn float__btn--home" href="#" title="홈"
+        ><img src="./resource/images/home.png" alt="홈"
+      /></a>
+      <a class="float__btn float__btn--remote" href="#" title="원격"
+        ><img src="./resource/images/computer.png" alt="원격"
+      /></a>
+      <a class="float__btn float__btn--kakao" href="#" title="카카오"
+        ><img src="./resource/images/kakaotalk.png" alt="카카오"
+      /></a>
+    </aside>
+
+    <script src="resource/js/common.js"></script>
+  </body>
+</html>
