@@ -54,6 +54,15 @@ body {
   gap: 18px;
 }
 
+.notice-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.notice-link:hover {
+  text-decoration: underline;
+}
+
 .brand {
   display: inline-flex;
   align-items: center;
