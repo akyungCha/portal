@@ -171,15 +171,15 @@
           파머스소식 <i class="ri-arrow-down-s-line" aria-hidden="true"></i>
         </button>
         <div class="drawer__sub">
-          <a href="#">공지사항</a>
+          <a href="./6-1 notice.html">공지사항</a>
           <a href="#">주요 일정</a>
         </div>
         <button class="drawer__item drawer__item--toggle" type="button">
           회원채널 <i class="ri-arrow-down-s-line" aria-hidden="true"></i>
         </button>
         <div class="drawer__sub">
-          <a href="#">교재자료실</a>
-          <a href="#">파머스디자인</a>
+          <a href="./5-1 board_book.html">교재자료실</a>
+          <a href="./4-1 board_design.html">파머스디자인</a>
         </div>
         <!-- 모바일에서 새김티처 안보이게 -->
         <button class="drawer__item drawer__item--toggle" type="button">
@@ -322,9 +322,13 @@
               </div>
               <h3 class="notice-modal__title" id="noticeModalTitle"></h3>
               <div class="notice-modal__body" id="noticeModalBody"></div>
-              <button class="notice-modal__btn" id="noticeModalConfirm">
-                상세보기
-              </button>
+              <button 
+  class="notice-modal__btn" 
+  id="noticeModalConfirm"
+  onclick="location.href='./6-2_notice_open.html'"
+>
+  상세보기
+</button>
             </div>
 
             <!-- 공지사항 카드 -->
@@ -337,9 +341,14 @@
                   </span>
                   공지 사항
                 </h2>
-                <button class="card__add" type="button" aria-label="추가">
-                  <img src="./resource/images/plus.png" alt="추가" />
-                </button>
+               <button 
+  class="card__add" 
+  type="button" 
+  aria-label="추가"
+  onclick="location.href='./6-1_notice.html'"
+>
+  <img src="./resource/images/plus.png" alt="추가" />
+</button>
               </header>
 
               <ul class="list" id="noticeList">
@@ -572,9 +581,14 @@
                 />
                 자료실
               </h2>
-              <button class="card__add" type="button" aria-label="추가">
-                <img src="./resource/images/plus.png" alt="추가" />
-              </button>
+              <button 
+  class="card__add" 
+  type="button" 
+  aria-label="추가"
+  onclick="location.href='./5-1_board_book.html'"
+>
+  <img src="./resource/images/plus.png" alt="추가" />
+</button>
             </header>
 
             <div class="tabs" role="tablist" aria-label="자료실 탭">
@@ -609,7 +623,7 @@
             <ul class="list list--compact">
               <li class="list__item">
                 <span class="dot dot--danger" aria-hidden="true"></span>
-                <a class="list__link" href="#"
+                <a class="list__link" href="./5-2 board_open_book.html"
                   >[필독]2026년 신규 교재 개정판 안내</a
                 >
                 <time class="list__date" datetime="2025-12-22">2025.12.22</time>
